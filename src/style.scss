@@ -1,0 +1,9 @@
+@use "sass:math";
+
+@function vw($px, $base: 1440) {
+  @return ($px / $base) * 100vw;
+}
+
+html {
+  background-color: black;
+}
