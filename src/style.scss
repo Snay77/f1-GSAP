@@ -1,9 +1,598 @@
 @use "sass:math";
 
+@import "./styles/fonts.scss";
+
 @function vw($px, $base: 1440) {
   @return ($px / $base) * 100vw;
 }
 
+:root {
+  --f1-red: #e10600;
+  --f1-black: #15151e;
+  --f1-carbon: #1f1f27;
+  --f1-gray: #38383f;
+}
+
 html {
-  background-color: black;
+  scrollbar-width: auto;
+  scrollbar-color: var(--f1-red) rgba(255, 255, 255, 0.10);
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--f1-black);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #800000 0%, var(--f1-red) 100%);
+  border-radius: 999px;
+
+  border: 3px solid var(--f1-black);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 0 18px rgba(225, 6, 0, 0.30);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.10),
+    0 0 22px rgba(225, 6, 0, 0.45);
+}
+
+::-webkit-scrollbar-thumb:active {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.14),
+    0 0 26px rgba(225, 6, 0, 0.60);
+}
+
+
+body {
+  margin: 0;
+  background-color: #15151f;
+  overflow-x: hidden;
+  font-family: "Formula1", sans-serif;
+}
+
+.color-alpine {
+  background-color: #0070ba;
+}
+
+.color-aston {
+  background-color: #005950;
+}
+
+.color-ferrari {
+  background-color: #D40000;
+}
+
+.color-haas {
+  background-color: #ffffff;
+}
+
+.color-kick {
+  background-color: #00e800;
+}
+
+.color-mclaren {
+  background-color: #f58a07;
+}
+
+.color-mercedes {
+  background-color: #00A19B;
+  // background-color: #018076;
+}
+
+.color-visa {
+  background-color: #1433cc;
+}
+
+.color-redbull {
+  background-color: #021636;
+  // background-color: #011421;
+}
+
+.color-williams {
+  background-color: #009fd9;
+  // background-color: #004cff;
+}
+
+// Preloader
+
+.preloader-f1 {
+
+  .window-cutout {
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+
+    --w: 70vw;
+    --h: 70vh;
+    --r: 32px;
+    --overlay: rgba(0, 0, 0, 1);
+
+    width: var(--w);
+    height: var(--h);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--r);
+
+    box-shadow: 0 0 0 9999px var(--overlay);
+
+    border: 5px solid rgba(255, 255, 255, 0.15);
+  }
+
+
+  .preloader-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    .team-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logo-team-container {
+        width: vw(250);
+        height: vw(250);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .logo-team {
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .bar-count {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: vw(40);
+    z-index: 10;
+
+    .countup {
+      font-size: 3.2rem;
+      font-weight: 300;
+      color: white;
+    }
+
+    .progress {
+      width: 80vw;
+      height: 0.2rem;
+      content: "";
+      position: relative;
+
+      .fill,
+      .background {
+        position: absolute;
+        inset: 0;
+        border-radius: 50rem;
+        content: "";
+        z-index: 6;
+      }
+
+      .fill {
+        background: white;
+        mix-blend-mode: exclusion;
+        // Voir pour inverser la couleur
+        z-index: 2;
+      }
+
+      .background {
+        background: rgba(255, 255, 255, 0.2);
+        mix-blend-mode: exclusion;
+        z-index: 1;
+      }
+    }
+
+  }
+}
+
+// Hero Section
+
+.hero-f1 {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .hero-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: vw(18);
+
+    .tile {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      .logo-team-hero {
+        width: 40%;
+        height: 40%;
+        object-fit: contain;
+      }
+    }
+
+    .tile--center {
+      grid-column: 2 / span 2;
+      grid-row: 2 / span 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logo-F1 {
+        width: 60%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.spacing {
+  height: 100vh;
+}
+
+// About Section
+
+.about-container {
+  margin: 0;
+  color: white;
+  display: flex;
+
+  .about-left {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .about-right {
+    display: flex;
+    flex-direction: column;
+
+    .about-title {
+      font-size: vw(28);
+      margin-bottom: vw(20);
+    }
+
+    .about-author {
+      font-size: vw(20);
+      margin-bottom: vw(200);
+    }
+
+    .about-desc {
+      max-width: vw(600);
+      font-size: vw(24);
+      line-height: 1.6;
+      margin-bottom: vw(100);
+    }
+  }
+
+
+  .about-image-container-1 .about-image {
+    box-shadow:
+      0 2px 6px rgba(255, 255, 255, 0.08),
+      0 8px 24px rgba(255, 255, 255, 0.10),
+      0 16px 40px rgba(255, 255, 255, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .about-image-container-1 {
+    padding: vw(120);
+
+    .about-image {
+      height: 80vh;
+      aspect-ratio: 2 / 3;
+      overflow: hidden;
+      position: relative;
+
+      picture {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 5;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: left center;
+        }
+      }
+    }
+  }
+}
+
+// Team presentation section
+
+.team-presentation {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-team-presentation {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+
+  .team-presentation-card {
+    flex: 0 0 100vw;
+    // width: 100vw;
+    height: 100vh;
+    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+
+
+    .team-content {
+      color: white;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .team-character--left,
+      .team-character--right {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        width: 20%;
+        height: 100%;
+
+        img {
+          height: 80%;
+          width: auto;
+          object-fit: contain;
+        }
+      }
+
+      .team-character--left {
+        img {
+          transform: scaleX(-1);
+        }
+      }
+
+      .team-content-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        gap: vw(20);
+        padding-top: vw(20);
+        padding-bottom: vw(20);
+
+        .logo-team-container-presentation {
+          width: vw(100);
+          height: vw(100);
+
+          .logo-team-presentation {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+        }
+
+        .team-car {
+          width: 100%;
+          height: auto;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+
+        .team-summary-card {
+          width: 50%;
+
+          background: rgba(45, 47, 56, 0.88);
+          border-radius: 14px;
+          padding: vw(20);
+
+          box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+          backdrop-filter: blur(8px);
+        }
+
+        .team-summary-title {
+          margin: 0;
+          font-size: vw(28);
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+
+        .team-summary-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .team-summary-row {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          align-items: center;
+
+          padding: vw(4) 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+          &:first-child {
+            border-top: 0;
+            padding-top: vw(4);
+          }
+
+          .label {
+            font-size: vw(14);
+            opacity: 0.75;
+          }
+
+          .value {
+            font-size: vw(28);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.team-progress {
+  position: absolute;
+  left: 50%;
+  bottom: 4vh;
+  transform: translateX(-50%) skewX(-12deg);
+  width: min(90vw, 1000px);
+  padding: 8px;
+  background: var(--f1-black);
+  border-left: 4px solid var(--f1-red);
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 999;
+}
+
+/* --- PISTE (TRACK) --- */
+.team-progress-track {
+  position: relative;
+  height: 10px;
+  background: var(--f1-gray);
+  overflow: visible;
+}
+
+/* --- REMPLISSAGE (FILL) --- */
+.team-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #800000 0%, var(--f1-red) 100%);
+  box-shadow: 0 0 15px rgba(225, 6, 0, 0.4);
+  z-index: 1;
+}
+
+/* --- CURSEUR (THUMB) --- */
+.team-progress-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 4px;
+  height: 34px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transition: height 0.2s ease;
+}
+
+/* Label au dessus du thumb */
+.team-progress-thumb::before {
+  content: "DRS";
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%) skewX(12deg);
+  font-size: 10px;
+  font-weight: 900;
+  color: var(--f1-red);
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* --- ÉTAPES (STEPS) --- */
+.team-progress-steps {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.team-progress-step {
+  width: 40px;
+  height: 100%;
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  outline: none;
+}
+
+/* Numéro sous chaque step */
+.team-progress-step::after {
+  content: "TEAM " attr(data-index);
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  transform: skewX(12deg);
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.team-progress-step:hover::after,
+.team-progress-step.is-active::after {
+  color: #fff;
+}
+
+.team-progress-step.is-active {
+  background: rgba(225, 6, 0, 0.15);
+}
+
+/* LED pour step actif */
+.team-progress-step.is-active::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 2px;
+  background: var(--f1-red);
+  box-shadow: 0 0 8px var(--f1-red);
+}
+
+/* Optionnel : état passé */
+.team-progress-step.is-past::after {
+  color: rgba(255, 255, 255, 0.55);
 }

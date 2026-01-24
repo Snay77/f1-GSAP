@@ -1,15 +1,824 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>f1-site</title>
-  </head>
-  <body>
-    <div id="app">
-      <p>Test</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>f1-site</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="preloader-f1">
+      <div class="window-cutout"></div>
+
+      <div class="preloader-full">
+        <div class="team-container color-alpine">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-alpine.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-aston">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-aston-martin.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-ferrari">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-ferrari.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-haas">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-haas.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-kick">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-kick.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-mclaren">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-mclaren.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-mercedes">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-mercedes.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-visa">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-visa-red-bull.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-redbull">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-redbull.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="preloader-full">
+        <div class="team-container color-williams">
+          <div class="logo-team-container">
+            <img class="logo-team" src="src/images/logo-williams.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="bar-count none">
+        <span class="countup">0</span>
+        <div class="progress">
+          <div class="fill"></div>
+          <div class="background"></div>
+        </div>
+      </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+    <section class="hero-f1">
+      <div class="hero-grid hero-grid--zoomed">
+
+        <div class="tile color-redbull">
+          <img class="logo-team-hero" src="src/images/logo-redbull.png" alt="">
+        </div>
+        <div class="tile color-alpine">
+          <img class="logo-team-hero" src="src/images/logo-alpine.png" alt="">
+        </div>
+        <div class="tile color-aston">
+          <img class="logo-team-hero" src="src/images/logo-aston-martin.jpg" alt="">
+        </div>
+        <div class="tile color-ferrari">
+          <img class="logo-team-hero" src="src/images/logo-ferrari.png" alt="">
+        </div>
+        <div class="tile color-haas">
+          <img class="logo-team-hero" src="src/images/logo-haas.png" alt="">
+        </div>
+
+        <div class="tile tile--center">
+          <img class="logo-F1" src="src/images/logo-F1.png" alt="">
+        </div>
+
+        <div class="tile color-kick">
+          <img class="logo-team-hero" src="src/images/logo-kick.png" alt="">
+        </div>
+        <div class="tile color-mclaren">
+          <img class="logo-team-hero" src="src/images/logo-mclaren.png" alt="">
+        </div>
+        <div class="tile color-mercedes">
+          <img class="logo-team-hero" src="src/images/logo-mercedes.png" alt="">
+        </div>
+        <div class="tile"></div>
+        <div class="tile color-visa">
+          <img class="logo-team-hero" src="src/images/logo-visa-red-bull.jpg" alt="">
+        </div>
+        <div class="tile color-williams">
+          <img class="logo-team-hero" src="src/images/logo-williams.png" alt="">
+        </div>
+        <div class="tile"></div>
+
+      </div>
+    </section>
+
+    <div class="spacing"></div>
+
+    <div class="about-container">
+      <div class="about-left">
+        <div class="about-image-container-1">
+          <div class="about-image">
+            <picture>
+              <img src="src/images/decoration/pit-stop.webp" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <p class="about-title">F1 Teams intro animation made with GSAP</p>
+        <p class="about-author">By Ethan Barlet</p>
+
+        <p class="about-desc">
+          Formula One is the highest level of international single-seater motorsport.
+          It features the world’s fastest cars competing on iconic circuits across the globe.
+          Teams and drivers push the limits of speed, technology, and skill throughout the season.
+          Formula One combines cutting-edge engineering with intense racing and global prestige
+        </p>
+
+        <p class="about-desc">
+          Formula One is the highest level of international single-seater motorsport.
+          It features the world’s fastest cars competing on iconic circuits across the globe.
+          Teams and drivers push the limits of speed, technology, and skill throughout the season.
+          Formula One combines cutting-edge engineering with intense racing and global prestige
+        </p>
+
+        <p class="about-desc">
+          Formula One is the highest level of international single-seater motorsport.
+          It features the world’s fastest cars competing on iconic circuits across the globe.
+          Teams and drivers push the limits of speed, technology, and skill throughout the season.
+          Formula One combines cutting-edge engineering with intense racing and global prestige
+        </p>
+
+        <!-- Ajoute autant de texte que tu veux -->
+      </div>
+    </div>
+
+    <div class="spacing"></div>
+
+    <div class="team-presentation">
+      <div class="team-progress">
+        <div class="team-progress-track">
+          <div class="team-progress-fill"></div>
+          <div class="team-progress-thumb"></div>
+          <div class="team-progress-steps"></div>
+        </div>
+      </div>
+
+      <div class="container-team-presentation">
+        <div class="team-presentation-card color-alpine">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025alpinepiegas01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-alpine.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">392</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">2000</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x21)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">60</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x20)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">20</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">2</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025alpinecarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025alpinefracol01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-aston">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025astonmartinferalo01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-aston-martin.jpg" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025astonmartincarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025astonmartinlanstr01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-ferrari">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025ferrarichalec01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-ferrari.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025ferraricarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025ferrarilewham01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-haas">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025haasestoco01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-haas.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025haascarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025haasolibea01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-kick">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025kicksaubergabbor01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-kick.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025kicksaubercarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025kicksaubernichul01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-mclaren">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025mclarenlannor01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-mclaren.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025mclarencarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025mclarenoscpia01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-mercedes">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025mercedesandant01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-mercedes.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025mercedescarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025mercedesgeorus01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-visa">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025racingbullsisahad01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-visa-red-bull.jpg" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025racingbullscarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025racingbullslialaw01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-redbull">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025redbullracingmaxver01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-redbull.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025redbullracingcarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025redbullracingyuktsu01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="team-presentation-card color-williams">
+          <div class="team-content">
+            <div class="team-character--left">
+              <img src="src/images/2025williamsalealb01right.avif" alt="">
+            </div>
+
+            <div class="team-content-center">
+              <div class="logo-team-container-presentation">
+                <img class="logo-team-presentation" src="src/images/logo-williams.png" alt="">
+              </div>
+
+              <div class="team-summary-card">
+                <h2 class="team-summary-title">TEAM SUMMARY</h2>
+
+                <ul class="team-summary-list">
+                  <li class="team-summary-row">
+                    <span class="label">Grand Prix Entered</span>
+                    <span class="value">152</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Team Points</span>
+                    <span class="value">863</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Race Finish</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Podiums</span>
+                    <span class="value">12</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Highest Grid Position</span>
+                    <span class="value">1 (x1)</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">Pole Positions</span>
+                    <span class="value">1</span>
+                  </li>
+
+                  <li class="team-summary-row">
+                    <span class="label">World Championships</span>
+                    <span class="value">0</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-car">
+                <img src="src/images/2025williamscarright.avif" alt="">
+              </div>
+            </div>
+
+            <div class="team-character--right">
+              <img src="src/images/2025williamscarsai01right.avif" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacing"></div>
+
+  </div>
+
+
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
