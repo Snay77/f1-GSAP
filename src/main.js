@@ -4,6 +4,7 @@ import Intro from "./animations/intro.js"
 import Hero from './animations/hero-pin.js';
 import About from './animations/about.js';
 import TeamPresentation from './animations/teamPresentation.js';
+import AboutAnimatedCopy from './animations/animatedText.js';
 
 class App {
     constructor() {
@@ -11,6 +12,7 @@ class App {
         this._initHero();
         this._initAbout();
         this._initTeamPresentation();
+        this._initAboutAnimatedCopy();
     }
 
     _initIntro() {
@@ -27,6 +29,10 @@ class App {
 
     _initTeamPresentation() {
         this.teamPresentation = new TeamPresentation();
+    }
+
+    _initAboutAnimatedCopy() {
+        this.aboutAnimatedCopy = new AboutAnimatedCopy();
     }
 }
 
