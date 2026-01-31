@@ -33,7 +33,7 @@
     </nav>
     <main data-barba="container" data-barba-namespace="home">
 
-      <div class="preloader-f1">
+      <div class="preloader-f1" data-cursor="-exclusion" data-cursor-pointer>
         <div class="window-cutout"></div>
 
         <div class="preloader-full">
@@ -135,7 +135,7 @@
           </div>
 
           <div class="tile tile--center">
-            <img class="logo-F1" src="src/images/logo-F1.png" alt="">
+            <img class="logo-F1" src="src/images/logo-F1.png" alt="" data-cursor="-exclusion" data-cursor-pointer>
           </div>
 
           <div class="tile color-kick">
@@ -159,7 +159,7 @@
         </div>
       </section>
 
-      <div class="spacing"></div>
+      <div class="spacing-1"></div>
 
       <div class="about-container" data-cursor-text="RACE">
         <div class="about-left">
@@ -173,8 +173,8 @@
         </div>
 
         <div class="about-right">
-          <p class="about-title">F1 Teams intro animation made with GSAP</p>
-          <p class="about-author">By Ethan Barlet</p>
+          <p class="about-title" data-appear>F1 Teams intro animation made with GSAP</p>
+          <p class="about-author" data-appear data-appear-split="words">By Ethan Barlet</p>
 
           <p class="about-desc" data-animated-copy>
             Formula One is the highest level of international single-seater motorsport.
@@ -197,23 +197,30 @@
             Formula One combines cutting-edge engineering with intense racing and global prestige
           </p>
 
-          <!-- Ajoute autant de texte que tu veux -->
         </div>
       </div>
 
-      <div class="spacing"></div>
+      <div class="spacing-2"></div>
 
       <div class="team-presentation">
         <div class="team-progress">
+          <button class="team-progress-arrow team-progress-arrow--prev" type="button" aria-label="Previous team">
+            ←
+          </button>
+
           <div class="team-progress-track">
             <div class="team-progress-fill"></div>
             <div class="team-progress-thumb"></div>
             <div class="team-progress-steps"></div>
           </div>
+
+          <button class="team-progress-arrow team-progress-arrow--next" type="button" aria-label="Next team">
+            →
+          </button>
         </div>
 
         <div class="container-team-presentation">
-          <div class="team-presentation-card color-alpine">
+          <div class="team-presentation-card color-alpine" data-team="ALPINE">
             <div class="team-content">
               <div class="team-character--left">
                 <img src="src/images/2025alpinepiegas01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
@@ -275,15 +282,17 @@
             </div>
           </div>
 
-          <div class="team-presentation-card color-aston">
+          <div class="team-presentation-card color-aston" data-team="ASTON">
             <div class="team-content">
               <div class="team-character--left">
-                <img src="src/images/2025astonmartinferalo01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025astonmartinferalo01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
 
               <div class="team-content-center">
                 <div class="logo-team-container-presentation">
-                  <img class="logo-team-presentation" src="src/images/logo-aston-martin.jpg" alt="" data-cursor-text="ASTON MARTIN">
+                  <img class="logo-team-presentation" src="src/images/logo-aston-martin.jpg" alt=""
+                    data-cursor-text="ASTON MARTIN">
                 </div>
 
                 <div class="team-summary-card">
@@ -327,17 +336,19 @@
                   </ul>
                 </div>
                 <div class="team-car">
-                  <img src="src/images/2025astonmartincarright.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                  <img src="src/images/2025astonmartincarright.avif" alt="" data-cursor="-exclusion"
+                    data-cursor-pointer>
                 </div>
               </div>
 
               <div class="team-character--right">
-                <img src="src/images/2025astonmartinlanstr01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025astonmartinlanstr01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
             </div>
           </div>
 
-          <div class="team-presentation-card color-ferrari">
+          <div class="team-presentation-card color-ferrari" data-team="FERRARI">
             <div class="team-content">
               <div class="team-character--left">
                 <img src="src/images/2025ferrarichalec01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
@@ -345,7 +356,8 @@
 
               <div class="team-content-center">
                 <div class="logo-team-container-presentation">
-                  <img class="logo-team-presentation" src="src/images/logo-ferrari.png" alt="" data-cursor-text="FERRARI">
+                  <img class="logo-team-presentation" src="src/images/logo-ferrari.png" alt=""
+                    data-cursor-text="FERRARI">
                 </div>
 
                 <div class="team-summary-card">
@@ -399,7 +411,7 @@
             </div>
           </div>
 
-          <div class="team-presentation-card color-haas">
+          <div class="team-presentation-card color-haas" data-team="HAAS">
             <div class="team-content">
               <div class="team-character--left">
                 <img src="src/images/2025haasestoco01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
@@ -461,10 +473,11 @@
             </div>
           </div>
 
-          <div class="team-presentation-card color-kick">
+          <div class="team-presentation-card color-kick" data-team="KICK">
             <div class="team-content">
               <div class="team-character--left">
-                <img src="src/images/2025kicksaubergabbor01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025kicksaubergabbor01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
 
               <div class="team-content-center">
@@ -518,12 +531,13 @@
               </div>
 
               <div class="team-character--right">
-                <img src="src/images/2025kicksaubernichul01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025kicksaubernichul01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
             </div>
           </div>
 
-          <div class="team-presentation-card color-mclaren">
+          <div class="team-presentation-card color-mclaren" data-team="MCLAREN">
             <div class="team-content">
               <div class="team-character--left">
                 <img src="src/images/2025mclarenlannor01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
@@ -531,7 +545,8 @@
 
               <div class="team-content-center">
                 <div class="logo-team-container-presentation">
-                  <img class="logo-team-presentation" src="src/images/logo-mclaren.png" alt="" data-cursor-text="MCLAREN">
+                  <img class="logo-team-presentation" src="src/images/logo-mclaren.png" alt=""
+                    data-cursor-text="MCLAREN">
                 </div>
 
                 <div class="team-summary-card">
@@ -585,15 +600,17 @@
             </div>
           </div>
 
-          <div class="team-presentation-card color-mercedes">
+          <div class="team-presentation-card color-mercedes" data-team="MERCEDES">
             <div class="team-content">
               <div class="team-character--left">
-                <img src="src/images/2025mercedesandant01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025mercedesandant01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
 
               <div class="team-content-center">
                 <div class="logo-team-container-presentation">
-                  <img class="logo-team-presentation" src="src/images/logo-mercedes.png" alt="" data-cursor-text="MERCEDES">
+                  <img class="logo-team-presentation" src="src/images/logo-mercedes.png" alt=""
+                    data-cursor-text="MERCEDES">
                 </div>
 
                 <div class="team-summary-card">
@@ -642,20 +659,23 @@
               </div>
 
               <div class="team-character--right">
-                <img src="src/images/2025mercedesgeorus01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025mercedesgeorus01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
             </div>
           </div>
 
-          <div class="team-presentation-card color-visa">
+          <div class="team-presentation-card color-visa" data-team="VISA">
             <div class="team-content">
               <div class="team-character--left">
-                <img src="src/images/2025racingbullsisahad01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025racingbullsisahad01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
 
               <div class="team-content-center">
                 <div class="logo-team-container-presentation">
-                  <img class="logo-team-presentation" src="src/images/logo-visa-red-bull.jpg" alt="" data-cursor-text="VISA RED BULL">
+                  <img class="logo-team-presentation" src="src/images/logo-visa-red-bull.jpg" alt=""
+                    data-cursor-text="VISA RED BULL">
                 </div>
 
                 <div class="team-summary-card">
@@ -699,25 +719,29 @@
                   </ul>
                 </div>
                 <div class="team-car">
-                  <img src="src/images/2025racingbullscarright.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                  <img src="src/images/2025racingbullscarright.avif" alt="" data-cursor="-exclusion"
+                    data-cursor-pointer>
                 </div>
               </div>
 
               <div class="team-character--right">
-                <img src="src/images/2025racingbullslialaw01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025racingbullslialaw01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
             </div>
           </div>
 
-          <div class="team-presentation-card color-redbull">
+          <div class="team-presentation-card color-redbull" data-team="RED BULL">
             <div class="team-content">
               <div class="team-character--left">
-                <img src="src/images/2025redbullracingmaxver01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025redbullracingmaxver01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
 
               <div class="team-content-center">
                 <div class="logo-team-container-presentation">
-                  <img class="logo-team-presentation" src="src/images/logo-redbull.png" alt="" data-cursor-text="RED BULL">
+                  <img class="logo-team-presentation" src="src/images/logo-redbull.png" alt=""
+                    data-cursor-text="RED BULL">
                 </div>
 
                 <div class="team-summary-card">
@@ -761,25 +785,29 @@
                   </ul>
                 </div>
                 <div class="team-car">
-                  <img src="src/images/2025redbullracingcarright.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                  <img src="src/images/2025redbullracingcarright.avif" alt="" data-cursor="-exclusion"
+                    data-cursor-pointer>
                 </div>
               </div>
 
               <div class="team-character--right">
-                <img src="src/images/2025redbullracingyuktsu01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025redbullracingyuktsu01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
             </div>
           </div>
 
-          <div class="team-presentation-card color-williams">
+          <div class="team-presentation-card color-williams" data-team="WILLIAMS">
             <div class="team-content">
               <div class="team-character--left">
-                <img src="src/images/2025williamsalealb01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025williamsalealb01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
 
               <div class="team-content-center">
                 <div class="logo-team-container-presentation">
-                  <img class="logo-team-presentation" src="src/images/logo-williams.png" alt="" data-cursor-text="WILLIAMS">
+                  <img class="logo-team-presentation" src="src/images/logo-williams.png" alt=""
+                    data-cursor-text="WILLIAMS">
                 </div>
 
                 <div class="team-summary-card">
@@ -828,14 +856,54 @@
               </div>
 
               <div class="team-character--right">
-                <img src="src/images/2025williamscarsai01right.avif" alt="" data-cursor="-exclusion" data-cursor-pointer>
+                <img src="src/images/2025williamscarsai01right.avif" alt="" data-cursor="-exclusion"
+                  data-cursor-pointer>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="spacing"></div>
+      <div class="spacing-3"></div>
+
+      <footer data-cursor="-inverse">
+        <div class="container">
+            <h2 class="footer-main-title" data-cursor-text="FULL SPEED">FINISH LINE</h2>
+            
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Direction de course</h4>
+                    <a href="#" class="footer-link" data-cursor-text="VOIR">Le Championnat</a>
+                    <a href="#" class="footer-link" data-cursor-text="VOIR">Écuries & Pilotes</a>
+                    <a href="#" class="footer-link" data-cursor-text="VOIR">Calendrier 2024</a>
+                    <a href="#" class="footer-link" data-cursor-text="VOIR">Télémétrie Live</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Paddock</h4>
+                    <a href="#" class="footer-link" data-cursor-pointer>Hospitalité</a>
+                    <a href="#" class="footer-link" data-cursor-pointer>Billetterie</a>
+                    <a href="#" class="footer-link" data-cursor-pointer>Boutique</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <a href="#" class="footer-link" data-cursor-pointer>Instagram</a>
+                    <a href="#" class="footer-link" data-cursor-pointer>X / Twitter</a>
+                    <a href="#" class="footer-link" data-cursor-pointer>TikTok</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="coordinates">
+                    LAT: 44.8333° N, LON: 11.6167° E // Ethan Barlet concepteur & développeur web
+                </div>
+                <div>
+                    &copy; 2025 F1 SPEED LAB. DESIGNED FOR PERFORMANCE.
+                </div>
+            </div>
+        </div>
+    </footer>
 
     </main>
   </div>

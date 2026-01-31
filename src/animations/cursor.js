@@ -1,4 +1,3 @@
-// src/animations/cursor.js
 import MouseFollower from "mouse-follower";
 import gsap from "gsap";
 
@@ -10,7 +9,6 @@ export default class Cursor {
   }
 
   init() {
-    // Sur mobile/tactile, inutile
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
     this.cursor = new MouseFollower({
@@ -29,7 +27,6 @@ export default class Cursor {
   }
 
   createCursorEffects() {
-    // Pulse à l'entrée sur un élément "pointer"
     this.cursor.on("addState", (instance, state) => {
       if (state !== "-pointer") return;
       const el = instance?.el;
@@ -42,7 +39,6 @@ export default class Cursor {
       );
     });
 
-    // Feedback au clic
     this.cursor.on("addState", (instance, state) => {
       if (state !== "-active") return;
       const el = instance?.el;

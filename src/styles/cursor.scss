@@ -10,7 +10,6 @@
   --f1-white: #ffffff;
 }
 
-/* Comme la démo : cache le curseur natif */
 body {
   cursor: none;
 }
@@ -23,10 +22,8 @@ body {
   pointer-events: none;
   transition: opacity 0.3s ease, color 0.3s ease;
 
-  /* Couleur F1 par défaut */
   color: var(--f1-red);
 
-  /* Cercle extérieur */
   &::before {
     content: "";
     position: absolute;
@@ -41,7 +38,6 @@ body {
       background 0.3s ease;
   }
 
-  /* Point central */
   &::after {
     content: "";
     position: absolute;
@@ -54,19 +50,17 @@ body {
     transition: transform 0.2s ease;
   }
 
-  /* État Hover (Pointer) */
   &.-pointer {
     color: var(--f1-red);
 
     &::before {
       transform: scale(1.3);
       border-width: 2px;
-      background: rgba(225, 6, 0, 0.15); /* légère lueur rouge */
+      background: rgba(225, 6, 0, 0.15);
       box-shadow: 0 0 0 calc(var(--mf-pulse, 0) * 25px) rgba(225, 6, 0, 0);
     }
   }
 
-  /* État Texte */
   &.-text {
     &::before {
       transform: scale(2.8);
@@ -75,7 +69,6 @@ body {
     }
   }
 
-  /* État Exclusion (pour les images) */
   &.-exclusion {
     @supports (mix-blend-mode: exclusion) {
       mix-blend-mode: exclusion;
@@ -89,7 +82,6 @@ body {
     }
   }
 
-  /* Clic actif */
   &.-active {
     &::before {
       transform: scale(0.7);
@@ -97,7 +89,6 @@ body {
   }
 }
 
-/* Styles du texte interne au curseur */
 .mf-cursor-text {
   position: absolute;
   top: -40px;

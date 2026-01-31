@@ -19,12 +19,11 @@ export default class AboutAnimatedCopy {
   }
 
   animate(el) {
-    // Couleurs (variables CSS demandées + blanc en final)
+
     const colorInitial = el.dataset.colorInitial || "var(--f1-gray)";
     const colorAccent = el.dataset.colorAccent || "var(--f1-red)";
     const colorFinal = el.dataset.colorFinal || "#ffffff";
 
-    // Split words then chars
     const wordSplit = new SplitText(el, {
       type: "words",
       wordsClass: "word",
@@ -37,7 +36,6 @@ export default class AboutAnimatedCopy {
 
     const allChars = charSplit.chars;
 
-    // stock pour cleanup
     this.splits.push(wordSplit, charSplit);
 
     let lastScrollProgress = 0;
@@ -78,7 +76,6 @@ export default class AboutAnimatedCopy {
         const currentCharIndex = Math.floor(progress * totalChars);
 
         allChars.forEach((char, index) => {
-          // scroll up: reset les chars “après” la zone
           if (!isScrollingDown && index >= currentCharIndex) {
             if (colorTransitionTimers.has(index)) {
               clearTimeout(colorTransitionTimers.get(index));
@@ -112,7 +109,6 @@ export default class AboutAnimatedCopy {
     this.scrollTriggers.forEach((st) => st.kill());
     this.scrollTriggers = [];
 
-    // Revert SplitText proprement
     this.splits.forEach((s) => {
       try {
         s.revert();

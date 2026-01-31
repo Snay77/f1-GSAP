@@ -1,4 +1,3 @@
-// src/circuitsHover.js
 import gsap from "gsap";
 
 console.log("[CircuitsHover] file loaded ✅");
@@ -126,7 +125,6 @@ export default class CircuitsHover {
     }
 
     destroy() {
-        // (optionnel si tu veux nettoyer plus tard)
         window.removeEventListener("mousemove", this.handleMove);
         if (this.table) this.table.removeEventListener("mouseleave", this.handleLeaveTable);
 
