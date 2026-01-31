@@ -146,24 +146,39 @@ export default class Transitions {
         return tl;
     }
 
+    timelineToPromise(tl) {
+        return new Promise((resolve) => {
+            tl.eventCallback("onComplete", resolve);
+        });
+    }
+
+
     createTransitions() {
         barba.init({
             transitions: [
                 {
                     name: "f1-page-transition",
+                    sync: false,
                     once: () => {
                         gsap.set(".preloader-f1", { display: "block" });
 
-                        const intro =  new Intro();
+                        const intro = new Intro();
 
-                        intro.eventCallback("onComplete", () => {
+                        return this.timelineToPromise(intro.tl).then(() => {
                             gsap.set(".preloader-f1", { display: "none" });
                         });
-
-                        return intro;
                     },
-                    leave: (data) => this.leaveAnimation(data),
-                    enter: () => this.enterAnimation(),
+
+                    leave: (data) => {
+                        const tl = this.leaveAnimation(data);
+                        tl.set(data.current.container, { display: "none" });
+                        return this.timelineToPromise(tl);
+                    },
+
+                    enter: (data) => {
+                        const tl = this.enterAnimation();
+                        return this.timelineToPromise(tl);
+                    },
                 },
             ],
         });

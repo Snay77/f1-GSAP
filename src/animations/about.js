@@ -12,7 +12,13 @@ export default class Hero {
 
         this.setupElements();
 
+        if (!this.containerAbout || !this.containerLeft || !this.containerRight) {
+            return;
+        }
+
+
         this.createScrollAnimations();
+
     }
 
     setupElements() {

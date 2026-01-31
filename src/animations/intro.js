@@ -11,7 +11,7 @@ init() {
   }
   
   setupElements() {
-      this.countup = document.querySelector(".preloader-f1 .countup");
+    this.countup = document.querySelector(".preloader-f1 .countup");
     this.progressFill = document.querySelector(".preloader-f1 .progress .fill");
     this.preloaderItems = [...document.querySelectorAll(".preloader-full")].reverse();
     this.windowCutout = document.querySelector(".window-cutout");

@@ -2,37 +2,332 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circuits</title>
 </head>
 
 <body>
-    <div class="transition">
-        <div class="transi-element transi-left transi-white-1"></div>
-        <div class="transi-element transi-left transi-red-dark-1"></div>
-        <div class="transi-element transi-left transi-red-light-1"></div>
+  <div class="transition">
+    <div class="transi-element transi-left transi-white-1"></div>
+    <div class="transi-element transi-left transi-red-dark-1"></div>
+    <div class="transi-element transi-left transi-red-light-1"></div>
 
-        <div class="transi-element transi-background"></div>
-        <div class="transi-element transi-center transi-f1-logo">
-            <img src="src/images/logo-F1.png" alt="">
+    <div class="transi-element transi-background"></div>
+    <div class="transi-element transi-center transi-f1-logo">
+      <img src="src/images/logo-F1.png" alt="">
+    </div>
+
+    <div class="transi-element transi-right transi-red-light-2"></div>
+    <div class="transi-element transi-right transi-red-dark-2"></div>
+    <div class="transi-element transi-right transi-white-2"></div>
+  </div>
+
+  <div id="app" data-barba="wrapper">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/circuits.html">Circuits</a></li>
+      </ul>
+    </nav>
+
+    <main data-barba="container" data-barba-namespace="circuits">
+      <section class="circuits-page">
+        <header class="circuits-header">
+          <p class="circuits-kicker">Calendrier</p>
+          <h1 class="circuits-title">Circuits des grands prix de F1</h1>
+        </header>
+
+        <div class="circuits-table" data-circuits-table>
+          <div class="circuits-row circuits-row--head" aria-hidden="true">
+            <div class="circuits-col circuits-col--name">Grand Prix</div>
+            <div class="circuits-col circuits-col--meta">Date</div>
+            <div class="circuits-col circuits-col--meta">Circuit</div>
+            <div class="circuits-col circuits-col--type">Type</div>
+          </div>
+
+          <!-- ROWS -->
+          <a class="circuits-row"
+             href="#"
+             data-circuit-row
+             data-image="src/images/circuits/australie-melbourne.avif"
+             data-alt="Circuit de Melbourne">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Australie</div>
+            <div class="circuits-col circuits-col--meta">16 mars</div>
+            <div class="circuits-col circuits-col--meta">Melbourne</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/chine-shanghai.jpg"
+             data-alt="Circuit de Shanghai">
+            <div class="circuits-col circuits-col--name">Grand Prix de Chine</div>
+            <div class="circuits-col circuits-col--meta">23 mars</div>
+            <div class="circuits-col circuits-col--meta">Shanghai</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="src/images/circuits/japon-suzuka.avif"
+             data-alt="Circuit de Suzuka">
+            <div class="circuits-col circuits-col--name">Grand Prix du Japon</div>
+            <div class="circuits-col circuits-col--meta">6 avril</div>
+            <div class="circuits-col circuits-col--meta">Suzuka</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/bahrein-sakhir.jpg"
+             data-alt="Circuit de Sakhir">
+            <div class="circuits-col circuits-col--name">Grand Prix de Bahreïn</div>
+            <div class="circuits-col circuits-col--meta">13 avril</div>
+            <div class="circuits-col circuits-col--meta">Sakhir</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/arabie-saoudite-jeddah.jpg"
+             data-alt="Circuit de Djeddah">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Arabie saoudite</div>
+            <div class="circuits-col circuits-col--meta">20 avril</div>
+            <div class="circuits-col circuits-col--meta">Djeddah</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/miami-miami-gardens.webp"
+             data-alt="Circuit de Miami">
+            <div class="circuits-col circuits-col--name">Grand Prix de Miami</div>
+            <div class="circuits-col circuits-col--meta">4 mai</div>
+            <div class="circuits-col circuits-col--meta">Miami Gardens</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/emilie-romagne-imola.jpg"
+             data-alt="Circuit d'Imola">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Émilie-Romagne</div>
+            <div class="circuits-col circuits-col--meta">18 mai</div>
+            <div class="circuits-col circuits-col--meta">Imola</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/monaco-monaco.webp"
+             data-alt="Circuit de Monaco">
+            <div class="circuits-col circuits-col--name">Grand Prix de Monaco</div>
+            <div class="circuits-col circuits-col--meta">25 mai</div>
+            <div class="circuits-col circuits-col--meta">Monaco</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/espagne-barcelone.jpg"
+             data-alt="Circuit de Barcelone">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Espagne</div>
+            <div class="circuits-col circuits-col--meta">1er juin</div>
+            <div class="circuits-col circuits-col--meta">Barcelone</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/canada-montreal.jpg"
+             data-alt="Circuit de Montréal">
+            <div class="circuits-col circuits-col--name">Grand Prix du Canada</div>
+            <div class="circuits-col circuits-col--meta">15 juin</div>
+            <div class="circuits-col circuits-col--meta">Montréal</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/autriche-spielberg.jpg"
+             data-alt="Circuit de Spielberg">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Autriche</div>
+            <div class="circuits-col circuits-col--meta">29 juin</div>
+            <div class="circuits-col circuits-col--meta">Spielberg</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/grande-bretagne-silverstone.jpg"
+             data-alt="Circuit de Silverstone">
+            <div class="circuits-col circuits-col--name">Grand Prix de Grande-Bretagne</div>
+            <div class="circuits-col circuits-col--meta">6 juillet</div>
+            <div class="circuits-col circuits-col--meta">Silverstone</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/belgique-spa.jpg"
+             data-alt="Circuit de Spa-Francorchamps">
+            <div class="circuits-col circuits-col--name">Grand Prix de Belgique</div>
+            <div class="circuits-col circuits-col--meta">27 juillet</div>
+            <div class="circuits-col circuits-col--meta">Spa-Francorchamps</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/hongrie-budapest.jpg"
+             data-alt="Circuit de Budapest">
+            <div class="circuits-col circuits-col--name">Grand Prix de Hongrie</div>
+            <div class="circuits-col circuits-col--meta">3 août</div>
+            <div class="circuits-col circuits-col--meta">Budapest</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/pays-bas-zandvoort.jpg"
+             data-alt="Circuit de Zandvoort">
+            <div class="circuits-col circuits-col--name">Grand Prix des Pays-Bas</div>
+            <div class="circuits-col circuits-col--meta">31 août</div>
+            <div class="circuits-col circuits-col--meta">Zandvoort</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/italie-monza.webp"
+             data-alt="Circuit de Monza">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Italie</div>
+            <div class="circuits-col circuits-col--meta">7 septembre</div>
+            <div class="circuits-col circuits-col--meta">Monza</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/azerbaidjan-bakou.png"
+             data-alt="Circuit de Bakou">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Azerbaïdjan</div>
+            <div class="circuits-col circuits-col--meta">21 septembre</div>
+            <div class="circuits-col circuits-col--meta">Bakou</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/singapour-marina-bay.jpg"
+             data-alt="Circuit de Marina Bay">
+            <div class="circuits-col circuits-col--name">Grand Prix de Singapour</div>
+            <div class="circuits-col circuits-col--meta">5 octobre</div>
+            <div class="circuits-col circuits-col--meta">Marina Bay</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/usa-austin.avif"
+             data-alt="Circuit d'Austin">
+            <div class="circuits-col circuits-col--name">Grand Prix des États-Unis</div>
+            <div class="circuits-col circuits-col--meta">19 octobre</div>
+            <div class="circuits-col circuits-col--meta">Austin</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/mexique-mexico.webp"
+             data-alt="Circuit de Mexico">
+            <div class="circuits-col circuits-col--name">Grand Prix de Mexico</div>
+            <div class="circuits-col circuits-col--meta">26 octobre</div>
+            <div class="circuits-col circuits-col--meta">Mexico</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/sao-paulo-sao-paulo.avif"
+             data-alt="Circuit de São Paulo">
+            <div class="circuits-col circuits-col--name">Grand Prix de São Paulo</div>
+            <div class="circuits-col circuits-col--meta">9 novembre</div>
+            <div class="circuits-col circuits-col--meta">São Paulo</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/las-vegas-las-vegas.jpg"
+             data-alt="Circuit de Las Vegas">
+            <div class="circuits-col circuits-col--name">Grand Prix de Las Vegas</div>
+            <div class="circuits-col circuits-col--meta">22 novembre</div>
+            <div class="circuits-col circuits-col--meta">Las Vegas</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/qatar-losail.webp"
+             data-alt="Circuit de Losail">
+            <div class="circuits-col circuits-col--name">Grand Prix du Qatar</div>
+            <div class="circuits-col circuits-col--meta">30 novembre</div>
+            <div class="circuits-col circuits-col--meta">Losail</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
+
+          <a class="circuits-row" href="#"
+             data-circuit-row
+             data-image="/src/images/circuits/abou-dabi-yas-marina.avif"
+             data-alt="Circuit de Yas Marina">
+            <div class="circuits-col circuits-col--name">Grand Prix d'Abou Dabi</div>
+            <div class="circuits-col circuits-col--meta">7 décembre</div>
+            <div class="circuits-col circuits-col--meta">Yas Marina</div>
+            <div class="circuits-col circuits-col--type">Formula 1</div>
+          </a>
         </div>
 
-        <div class="transi-element transi-right transi-red-light-2"></div>
-        <div class="transi-element transi-right transi-red-dark-2"></div>
-        <div class="transi-element transi-right transi-white-2"></div>
-    </div>
-    <div id="app" data-barba="wrapper">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/circuits">Circuits</a></li>
-            </ul>
-        </nav>
-        <main data-barba="container" data-barba-namespace="home">
-            <h1>Gros Test</h1>
-        </main>
-    </div>
+        <!-- PREVIEW qui suit la souris -->
+        <div class="circuit-preview" data-circuit-preview aria-hidden="true">
+          <div class="circuit-preview__frame">
+            <img class="circuit-preview__img" data-circuit-preview-img alt="" />
+          </div>
+        </div>
+
+        <!-- Preload silencieux (optionnel mais pratique) -->
+        <div class="circuit-preload" aria-hidden="true">
+          <img src="src/images/circuits/australie-melbourne.avif" alt="">
+          <img src="/src/images/circuits/chine-shanghai.jpg" alt="">
+          <img src="src/images/circuits/japon-suzuka.avif" alt="">
+          <img src="/src/images/circuits/bahrein-sakhir.jpg" alt="">
+          <img src="/src/images/circuits/arabie-saoudite-jeddah.jpg" alt="">
+          <img src="src/images/circuits/miami-miami-gardens.webp" alt="">
+          <img src="/src/images/circuits/emilie-romagne-imola.jpg" alt="">
+          <img src="/src/images/circuits/monaco-monaco.webp" alt="">
+          <img src="/src/images/circuits/espagne-barcelone.jpg" alt="">
+          <img src="/src/images/circuits/canada-montreal.jpg" alt="">
+          <img src="/src/images/circuits/autriche-spielberg.jpg" alt="">
+          <img src="/src/images/circuits/grande-bretagne-silverstone.jpg" alt="">
+          <img src="/src/images/circuits/belgique-spa.jpg" alt="">
+          <img src="/src/images/circuits/hongrie-budapest.jpg" alt="">
+          <img src="/src/images/circuits/pays-bas-zandvoort.jpg" alt="">
+          <img src="/src/images/circuits/italie-monza.webp" alt="">
+          <img src="/src/images/circuits/azerbaidjan-bakou.png" alt="">
+          <img src="/src/images/circuits/singapour-marina-bay.jpg" alt="">
+          <img src="/src/images/circuits/usa-austin.avif" alt="">
+          <img src="/src/images/circuits/mexique-mexico.webp" alt="">
+          <img src="/src/images/circuits/sao-paulo-sao-paulo.avif" alt="">
+          <img src="/src/images/circuits/las-vegas-las-vegas.jpg" alt="">
+          <img src="/src/images/circuits/qatar-losail.webp" alt="">
+          <img src="/src/images/circuits/abou-dabi-yas-marina.avif" alt="">
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
