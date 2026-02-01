@@ -2,6 +2,8 @@ import { gsap } from "gsap";
 import barba from "@barba/core";
 import Intro from "./intro";
 
+import App from "../main.js";
+
 export default class Transitions {
     constructor() {
         this.init();
@@ -109,7 +111,9 @@ export default class Transitions {
 
     enterAnimation() {
         const clips = this.getClips();
-        const tl = gsap.timeline({ defaults: { ease: "power3.inOut" } });
+        const tl = gsap.timeline({ defaults: { ease: "power3.inOut" }, onStart: () => {
+            new App();
+        } });
 
         tl.set(".transition", { autoAlpha: 1 });
         tl.set(".transi-background", { autoAlpha: 1, backdropFilter: "blur(12px)" });

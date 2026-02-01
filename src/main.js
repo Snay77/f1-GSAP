@@ -10,13 +10,13 @@ import CircuitsHover from './animations/circuitsHover.js';
 import Cursor from './animations/cursor.js';
 import ApparitionText from './animations/apparitionText.js';
 
-class App {
+export default class App {
     constructor() {
         this._initHero();
         this._initAbout();
         this._initTeamPresentation();
         this._initAboutAnimatedCopy();
-        this._initTransitions();
+        // this._initTransitions();
         this._initCircuitsHover();
         this._initCursor();
         this._initApparitionText();
@@ -63,3 +63,4 @@ class App {
 }
 
 new App();
+new Transitions();
